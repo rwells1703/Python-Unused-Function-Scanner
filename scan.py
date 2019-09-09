@@ -43,10 +43,10 @@ def check_identifier_usage(text, definition_positions):
             unused.append(identifier)
 
     if len(unused) == 0:
-        print("No problems in " + sys.argv[1] + " , all functions defined are used.")
+        print("No problems in '" + sys.argv[1] + "' , all defined functions are used.")
     else:
         for u in unused:
-            print(u + " is an unused function!")
+            print("Warning, '" + u + "' is an unused function!")
 
 
 if sys.argv[1] == None:
