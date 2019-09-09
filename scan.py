@@ -57,5 +57,5 @@ text_file = open(sys.argv[1], "r")
 text = text_file.read()
 text_file.close()
 
-definition_positions = get_match_positions(text, "def (.)+\((.)+\):")
+definition_positions = get_match_positions(text, "def (.)+\((.)*\):")
 check_identifier_usage(text, definition_positions)
